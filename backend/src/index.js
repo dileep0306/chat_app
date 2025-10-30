@@ -49,7 +49,13 @@ app.use("/api/messages", messageRoutes);
 //   });
 // }
 
-server.listen(PORT, () => {
+// server.listen(PORT, () => {
+//   console.log("server is running on PORT:" + PORT);
+//   connectDB();
+// });
+
+// ✅ Correct - binds to all interfaces (required for Render)
+server.listen(PORT, "0.0.0.0", () => {
   console.log("server is running on PORT:" + PORT);
   connectDB();
 });
