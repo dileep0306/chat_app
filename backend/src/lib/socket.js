@@ -5,10 +5,20 @@ import express from "express";
 const app = express();
 const server = http.createServer(app);
 
-const io = new Server(server, {
+// const io = new Server(server, {
+//   cors: {
+//     origin: ["http://localhost:5173"],
+//   },
+// });
+
+export const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"],
-  },
+    origin: process.env.NODE_ENV === "production"
+      ? process.env.FRONTEND_URL  // https://pulsechat-frontend.onrender.com
+      : "http://localhost:5173",
+    credentials: true,
+    methods: ["GET", "POST"]
+  }
 });
 
 export function getReceiverSocketId(userId) {
