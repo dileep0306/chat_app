@@ -18,7 +18,8 @@ const io = new Server(server, {
       : "http://localhost:5173",
     credentials: true,
     methods: ["GET", "POST"]
-  }
+  },
+  transports: ["websocket", "polling"]
 });
 
 export function getReceiverSocketId(userId) {
