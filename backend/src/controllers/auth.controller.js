@@ -77,13 +77,13 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
   try {
-    res.cookie("jwt", token, {
-  httpOnly: true,
-  secure: true,          // ✅ required on Render (HTTPS)
-  sameSite: "none",      // ✅ allows cross-domain cookie
-  path: "/",
-  secure: process.env.NODE_ENV === "production"            // ✅ ensure cookie applies globally
-});
+    res.cookie("jwt", "", {
+      maxAge: 0,  // ✅ This clears the cookie
+      httpOnly: true,
+      sameSite: "lax",  // ✅ Use "lax" like in generateToken
+      secure: process.env.NODE_ENV === "production",
+      path: "/"
+    });
 
     res.status(200).json({ message: "Logged out successfully" });
   } catch (error) {
@@ -91,6 +91,7 @@ export const logout = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
 
 export const updateProfile = async (req, res) => {
   try {
