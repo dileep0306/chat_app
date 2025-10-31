@@ -81,7 +81,8 @@ export const logout = (req, res) => {
   httpOnly: true,
   secure: true,          // ✅ required on Render (HTTPS)
   sameSite: "none",      // ✅ allows cross-domain cookie
-  path: "/",             // ✅ ensure cookie applies globally
+  path: "/",
+  secure: process.env.NODE_ENV === "production"            // ✅ ensure cookie applies globally
 });
 
     res.status(200).json({ message: "Logged out successfully" });
