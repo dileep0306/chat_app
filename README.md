@@ -36,8 +36,8 @@ Follow these steps to set up and run the project locally:
 
 3. **Configure environment variables:**
    Frontend_ENV:
-   VITE_API_URL=" "
-   VITE_SOCKET_URL=" "
+  - VITE_API_URL=" "
+  - VITE_SOCKET_URL=" "
 
    Backend_ENV:
    MONGODB_URI=" "
