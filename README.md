@@ -12,7 +12,7 @@ A real-time chat application built with Socket.io enabling users to send and rec
 
 ## Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, Tailwind CSS, React
 - **Backend:** Node.js, Express.js
 - **Real-time Communication:** Socket.IO / WebSockets
 - **Database:** MongoDB (for storing user data and chat history)
@@ -32,7 +32,7 @@ Follow these steps to set up and run the project locally:
 
 1. **Clone the repository:**
 2. cd chat_app
-   npm install
+ - npm install
 
 3. **Configure environment variables:**
   ### Frontend_ENV:
