@@ -35,15 +35,15 @@ Follow these steps to set up and run the project locally:
    npm install
 
 3. **Configure environment variables:**
-   Frontend_ENV:
+  ### Frontend_ENV:
   - VITE_API_URL=" "
   - VITE_SOCKET_URL=" "
 
-   Backend_ENV:
-   MONGODB_URI=" "
-   PORT=" "
-   NODE_ENV=" "
-   JWT_SECRET=" "
-   CLOUDINARY_CLOUD_NAME=" "
-   CLOUDINARY_API_KEY=" "
-   CLOUDINARY_API_SECRET=" "
+  ### Backend_ENV:
+  - MONGODB_URI=" "
+  - PORT=" "
+  - NODE_ENV=" "
+  - JWT_SECRET=" "
+  - CLOUDINARY_CLOUD_NAME=" "
+  - CLOUDINARY_API_KEY=" "
+  - CLOUDINARY_API_SECRET=" "
